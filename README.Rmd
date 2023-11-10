@@ -23,13 +23,14 @@ knitr::opts_chunk$set(
 
 `CovidWasteWatch` is an R package for analysis and visualization
 of COVID-19 wastewater viral signal and variant frequency data. 
-Using user-provided, pre-processed data, this package aims to provide users 
+Using user-provided pre-processed data, this package aims to provide users 
 with various statistical backgrounds a simple and efficient way to observe 
 trends in COVID-19 viral signal levels and variant frequencies over time, along 
 with options to visualize supplementary data such as reported cases and 
 mortality from public sources. 
-`CovidWasteWatch` was developed using `R version 4.3.1`, `Platform: 
-`x86_64-w64-mingw32/x64on`, and `Running under: Windows 11 x64`.
+`CovidWasteWatch` was developed using `R version 4.3.1 (2023-06-16 ucrt)`, 
+`Platform: x86_64-w64-mingw32/x64 (64-bit)`, and 
+`Running under: Windows 11 x64 (build 22621)`.
 
 ## Installation
 
@@ -46,12 +47,7 @@ Under construction
 
 ## Overview
 
-Provide the following commands, customized to your R package.
-Then provide an overview to briefly describe the main components of
-the package. Include one image illustrating the overview of the
-package, that shows the inputs and outputs. Ensure the image is
-deposited in the correct location, as discussed in class. Point the user
-to vignettes for a tutorial of your package.
+To see an overview of the package:
 
 ``` r
 ls("package:CovidWasteWatch")
@@ -67,21 +63,19 @@ browseVignettes("CovidWasteWatch")
 
 For tutorials demonstrating these functions, please see the vignettes.
 
+An overview of `CovidWasteWatch` is illustrated below.
 
 
 ## Contributions
 
-This package was developed by Vivian Wang, who formed the concept 
-and wrote the code.
+The author of this package is Vivian Wang.
 
-Provide a note clearly indicating contributions from you and
-contributions from other packages/sources for each function.
-Remember your individual contributions to the package are important.
 
 ## References
 
-Provide full references for all sources used, including for the packages
-mentioned under ‘Contributions’, in one specific format.
+R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
+
+Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4. https://ggplot2.tidyverse.org
 
 ## Acknowledgements
 

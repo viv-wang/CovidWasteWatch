@@ -1,0 +1,151 @@
+---
+title: "Introduction to CovidWasteWatch"
+author: "Vivian Wang"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: false
+vignette: >
+  %\VignetteIndexEntry{A tour of CovidWasteWatch}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+library(knitr)
+opts_chunk$set(fig.align = "center", 
+               out.width = "90%",
+               fig.width = 6, fig.height = 5.5,
+               dev.args=list(pointsize=10),
+               par = TRUE, # needed for setting hook 
+               collapse = TRUE, # collapse input & ouput code in chunks
+               warning = FALSE)
+library(CovidWasteWatch)
+```
+
+
+## Introduction
+
+`CovidWasteWatch` is an R package developed to provide analysis and visualization 
+options for COVID-19 wastewater viral signal data and viral variant frequency data.
+
+To download **CovidWasteWatch**, use the following commands:
+
+``` r
+require("devtools")
+devtools::install_github("viv-wang/CovidWasteWatch", build_vignettes = TRUE)
+library("CovidWasteWatch")
+```
+To list all sample functions available in the package:
+``` r
+ls("package:CovidWasteWatch")
+```
+
+To list all sample datasets available in the package:
+``` r
+data(package = "CovidWasteWatch")
+```
+
+<br>
+
+## Components
+
+<div style="text-align:center"><img src="" alt="" width="500"/>
+
+
+## Applications
+
+### Viral signal data
+
+Provide a valid path to a CSV file which includes columns 'date' and 'signal'.
+In this example, we use a dataset from COVID-19 wastewater surveillance by Public
+Health Ontario (see data documentation for more details).
+
+```{r}
+# Get path to example viral signal data CSV file
+signalFilepath <- system.file("extdata", "viral_signal_input_data.csv", 
+                              package = "CovidWasteWatch")
+# Run and store results of ViralSignal()
+ViralSignalResults <- ViralSignal(fileSignal = signalFilepath)
+
+# To view each component of the result separtely, see names 
+names(ViralSignalResults)
+# Alternatively, view all results
+ViralSignalResults
+```
+
+The plotting function `PlotViralSignal` can also be called on separately,
+with a dataframe that follows the required format.
+Here we use the dataframe containing data from the example dataset that has 
+been processed `ViralSignal()`: `ViralSignalDF` (see data documentation for more details).
+
+```{r}
+data("ViralSignalDF")
+SignalPlot <- PlotViralSignal(signalData = ViralSignalDF)
+# View plot
+SignalPlot
+```
+
+
+### Viral variant frequency (proportion) data
+
+Provide a valid path to a CSV file which includes columns 'date', 'variant', 
+'proportion', and, optionally 'parent' for parent variants. If a 'parent'
+column is not included, set the parameter `parentVariant = FALSE`.
+
+Here we use a public dataset of weekly COVID-19 variant breakdown from Health Canada
+(see data documentation for more details). This file includes a 'parent' column.
+
+```{r}
+# Get path to example variant breakdown CSV file
+varFilepath <- system.file("extdata", "variant_input_data.csv", package = "CovidWasteWatch")
+# Run and store results of VarBreakdown()
+# Note: parentVariants = TRUE by default
+VarBreakdownResults <- VarBreakdown(fileVariant = varFilepath)
+
+# To view each component of the result separtely, see names 
+names(VarBreakdownResults)
+# Alternatively, view all results
+VarBreakdownResults
+```
+
+The plotting function `PlotVarBreakdown` can also be called on separately,
+with a dataframe that follows the required format.
+Here we use the dataframe containing data from the example dataset that has 
+been processed `VarBreakdown()`: `VariantDF` (see data documentation for more details).
+
+```{r}
+data("VariantDF")
+VarPlot <- PlotVarBreakdown(varData = VariantDF)
+# View plot
+VarPlot
+```
+
+<br>
+
+## Package References
+
+- Wang, V. (2023) CovidWasteWatch: An R Package for COVID-19 Wastewater Data 
+  Analysis and Visualization. Unpublished. https://github.com/viv-wang/CovidWasteWatch
+
+<br>
+
+## Other References
+
+- Bengtsson, H (2022). R.utils: Various Programming Utilities. https://henrikbengtsson.github.io/R.utils/
+
+- R Core Team (2022). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
+
+- Silva, A. (2022) TestingPackage: An Example R Package For BCB410H.
+  Unpublished. URL https://github.com/anjalisilva/TestingPackage
+
+- Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4. https://ggplot2.tidyverse.org
+
+- Wickham H, François R, Henry L, Müller K, Vaughan D. (2023). dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org
+
+----
+
+```{r}
+sessionInfo()
+```

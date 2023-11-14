@@ -4,6 +4,9 @@
 # Version: 0.1.0
 # Bugs and Issues: None
 
+# Declare global variables to prevent CMD check note
+globalVariables(c("proportion", "cf", "signal", "variant", "parent"))
+
 #' Loads and provides overview of viral signal data
 #'
 #' A function that extracts relevant data from the file, calculates the number of

@@ -25,13 +25,13 @@ globalVariables(c("proportion", "cf", "signal", "variant", "parent"))
 #'
 #' @references
 #' Bengtsson, H (2022). R.utils: Various Programming Utilities.
-#'https://henrikbengtsson.github.io/R.utils/.
+#' https://henrikbengtsson.github.io/R.utils/
 #'
 #' Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis.
 #' Springer-Verlag New York. ISBN 978-3-319-24277-4. https://ggplot2.tidyverse.org
 #'
 #' Wickham H, François R, Henry L, Müller K, Vaughan D. (2023).
-#' dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.
+#' dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org
 #'
 #' @export
 #' @import utils
@@ -104,13 +104,13 @@ ViralSignal <- function(fileSignal = NA) {
 #'
 #' @references
 #' Bengtsson, H (2022). R.utils: Various Programming Utilities.
-#' https://henrikbengtsson.github.io/R.utils/.
+#' https://henrikbengtsson.github.io/R.utils/
 #'
 #' Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis.
 #' Springer-Verlag New York. ISBN 978-3-319-24277-4. https://ggplot2.tidyverse.org
 #'
 #' Wickham H, François R, Henry L, Müller K, Vaughan D. (2023).
-#' dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org.
+#' dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org
 #'
 #' @export
 #' @import utils

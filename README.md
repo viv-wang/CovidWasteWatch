@@ -41,29 +41,43 @@ data(package = "CovidWasteWatch") # optional
 browseVignettes("CovidWasteWatch") 
 ```
 
-`CovidWasteWatch` provides \_\_ functions:
+`CovidWasteWatch` provides 4 functions:
 
-- 
-- 
-- 
+- `ViralSignal()`
+- `VarBreakdown()`
+- `PlotViralSignal()`
+- `PlotVarBreakdown()`
 
-For tutorials demonstrating these functions, please see the vignettes.
+For a tutorial demonstrating these functions, please see the vignettes.
 
 An overview of `CovidWasteWatch` is illustrated below.
 
 ## Contributions
 
-The author of this package is Vivian Wang.
+The author of this package is Vivian Wang. The data overview functions
+`ViralSignal()` and `VarBreakdown()` use`R.utils` to read the input CSV
+files, and `dplyr` to arrange the loaded datasets. The plotting
+functions `PlotViralSignal()` and `PlotVarBreakdown()` utilize `ggplot2`
+to create graphical output from the processed data.
 
 ## References
+
+Bengtsson, H (2022). R.utils: Various Programming Utilities.
+<https://henrikbengtsson.github.io/R.utils/>
 
 R Core Team (2023). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>
 
+Silva, A. (2022) TestingPackage: An Example R Package For BCB410H.
+Unpublished. URL <https://github.com/anjalisilva/TestingPackage>
+
 Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis.
 Springer-Verlag New York. ISBN 978-3-319-24277-4.
 <https://ggplot2.tidyverse.org>
+
+Wickham H, François R, Henry L, Müller K, Vaughan D. (2023). dplyr: A
+Grammar of Data Manipulation. <https://dplyr.tidyverse.org>
 
 ## Acknowledgements
 

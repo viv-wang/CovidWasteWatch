@@ -1,14 +1,25 @@
 Package: CovidWasteWatch
 Type: Package
-Title: A COVID-19 Wastewater Data Analysis and Visualization Tool
+Title: An R Package for COVID-19 Wastewater Data Analysis and Visualization
 Version: 0.1.0
 Author: person("Vivian", "Wang", email = 'vivianc.wang@mail.utoronto.ca), role = c("aut", "cre"))
 Maintainer: Vivian Wang <vivianc.wang@mail.utoronto.ca>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Provides analysis and visualization of user-provided COVID-19 
+    wastewater viral signal and variant frequency data. 
+    Offers supplementary options to visualize public COVID-19 data in specified
+    timeframes to observe trends.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 3.1.0)
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Imports: 
+    dplyr (>= 1.1.3),
+    ggplot2 (>= 3.4.4)
+Config/testthat/edition: 3

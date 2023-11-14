@@ -23,7 +23,7 @@ test_that("PlotViralSignal() does not mutate data", {
   expect_identical(plot$data, ViralSignalDF)
 })
 
-test_that("PlotVarBreakdown() does not mutate original data", {
+test_that("PlotVarBreakdown() does not change original data", {
   data("VariantDF")
   plot <- PlotVarBreakdown(varData = VariantDF)
   expect_identical(plot$data$date, VariantDF$date)

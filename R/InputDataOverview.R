@@ -238,24 +238,35 @@ PlotViralSignal <- function(signalData = NA) {
 #' @import ggplot2
 PlotVarBreakdown <- function(varData = NA) {
     # Get earliest and latest date
+    varData$date <- as.Date(varData$date) # Confirm format
     earliestDate <- min(varData$date)
     latestDate <- max(varData$date)
 
     if (("parent" %in% colnames(varData))) {
-      # Make combined factors for parent-variant pairs
-      varData$cf <- factor(paste(varData$parent, varData$variant, sep = " - "),
-                    levels = unique(paste(varData$parent,
-                                          varData$variant, sep = " - ")))
+        # Make combined factors for parent-variant pairs
+        varData$cf <- factor(paste(varData$parent, varData$variant, sep = " - "),
+                      levels = unique(paste(varData$parent,
+                                            varData$variant, sep = " - ")))
 
-      # Create a ggplot object for a stacked bar graph
-      plot <- ggplot(varData, aes(x = date, y = proportion, fill = cf)) +
-        geom_bar(stat = "identity") +
-        labs(title = paste("Viral variant breakdown from", earliestDate,
-                           "to", latestDate),
-             x = "Date",
-             y = "Percentage of samples",
-             fill = "Variant") +
-        theme(legend.position = "top")  # Move legend to the top
+        # Create a ggplot object for a stacked bar graph
+        plot <- ggplot(varData, aes(x = date, y = proportion, fill = cf)) +
+          geom_bar(stat = "identity") +
+          labs(title = paste("Viral variant breakdown from", earliestDate,
+                             "to", latestDate),
+               x = "Date",
+               y = "Percentage of samples",
+               fill = "Variant") +
+          theme(legend.position = "top")  # Move legend to the top
+    } else {
+        # Create a ggplot object for a stacked bar graph
+        plot <- ggplot(varData, aes(x = date, y = proportion, fill = variant)) +
+          geom_bar(stat = "identity") +
+          labs(title = paste("Viral variant breakdown from", earliestDate,
+                             "to", latestDate),
+               x = "Date",
+               y = "Percentage of samples",
+               fill = "Variant") +
+          theme(legend.position = "top")  # Move legend to the top
     }
     return(plot)
 }

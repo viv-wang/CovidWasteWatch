@@ -13,9 +13,8 @@ COVID-19 wastewater viral signal and variant frequency data. Using
 user-provided pre-processed data, this package aims to provide users
 with various statistical backgrounds a simple and efficient way to
 observe trends in COVID-19 viral signal levels and variant frequencies
-over time, along with options to visualize supplementary data such as
-reported cases and mortality from public sources. `CovidWasteWatch` was
-developed using `R version 4.3.1 (2023-06-16 ucrt)`,
+over time. `CovidWasteWatch` was developed using
+`R version 4.3.1 (2023-06-16 ucrt)`,
 `Platform: x86_64-w64-mingw32/x64 (64-bit)`, and
 `Running under: Windows 11 x64 (build 22621)`.
 
@@ -43,22 +42,33 @@ browseVignettes("CovidWasteWatch")
 
 `CovidWasteWatch` provides 4 functions:
 
-- `ViralSignal()`
-- `VarBreakdown()`
-- `PlotViralSignal()`
-- `PlotVarBreakdown()`
+- `ViralSignal()` loads and extracts relevant data from a CSV file
+  containing COVID-19 viral signal data over time, producing a
+  statistical and graphical (line plot) overview of the data.
+- `VarBreakdown()` loads and extracts relevant data from a CSV file
+  containing COVID-19 viral variant proportion data over time, producing
+  a statistical and graphical (stacked bar plot) overview of the data.
+- `PlotViralSignal()` plots viral signal data from a given dataframe as
+  a line plot, with dots as markers for each data point.
+- `PlotVarBreakdown()` plots viral variant breakdown data from a given
+  dataframe as a stacked bar plot, where each stacked bar represents the
+  variant breakdown at one time point.
 
 For a tutorial demonstrating these functions, please see the vignettes.
+The package also contains two sample datasets, one for each COVID-19
+data type, which are described in the data documentation and the
+introductory vignette.
 
 An overview of `CovidWasteWatch` is illustrated below.
 
 ## Contributions
 
-The author of this package is Vivian Wang. The data overview functions
-`ViralSignal()` and `VarBreakdown()` use`R.utils` to read the input CSV
-files, and `dplyr` to arrange the loaded datasets. The plotting
-functions `PlotViralSignal()` and `PlotVarBreakdown()` utilize `ggplot2`
-to create graphical output from the processed data.
+The author of this package is Vivian Wang, who wrote the four functions.
+The data overview functions `ViralSignal()` and `VarBreakdown()`
+use`R.utils` to read the input CSV files, and `dplyr` to arrange the
+loaded datasets. The plotting functions `PlotViralSignal()` and
+`PlotVarBreakdown()` utilize `ggplot2` to create graphical output from
+the processed data.
 
 ## References
 

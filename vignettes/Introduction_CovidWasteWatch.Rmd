@@ -49,11 +49,6 @@ data(package = "CovidWasteWatch")
 
 <br>
 
-## Components
-
-<div style="text-align:center"><img src="" alt="" width="500"/>
-
-
 ## Applications
 
 ### Viral signal data

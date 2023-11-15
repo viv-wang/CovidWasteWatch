@@ -73,6 +73,7 @@ which are described in the data documentation and the introductory vignette.
 
 An overview of `CovidWasteWatch` is illustrated below.
 
+![](./inst/extdata/package_overview.png)
 
 ## Contributions
 

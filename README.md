@@ -61,6 +61,8 @@ introductory vignette.
 
 An overview of `CovidWasteWatch` is illustrated below.
 
+![](./inst/extdata/package_overview.png)
+
 ## Contributions
 
 The author of this package is Vivian Wang, who wrote the four functions.

@@ -49,7 +49,7 @@ To see an overview of the package:
 
 ``` r
 ls("package:CovidWasteWatch")
-data(package = "CovidWasteWatch") # optional
+data(package = "CovidWasteWatch")
 browseVignettes("CovidWasteWatch") 
 ```
 

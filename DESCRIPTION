@@ -20,5 +20,6 @@ VignetteBuilder: knitr
 Imports: 
     dplyr (>= 1.1.3),
     ggplot2 (>= 3.4.4),
-    utils (>= 4.3.1)
+    utils (>= 4.3.1),
+    shiny
 Config/testthat/edition: 3

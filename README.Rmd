@@ -40,8 +40,10 @@ devtools::install_github("viv-wang/CovidWasteWatch", build_vignettes = TRUE)
 library("CovidWasteWatch")
 ```
 
-To run the shinyApp:
-Under construction
+To run the Shiny app:
+``` r
+runCovidWasteWatch
+``` 
 
 ## Overview
 

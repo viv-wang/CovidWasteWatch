@@ -79,25 +79,32 @@ An overview of `CovidWasteWatch` is illustrated below.
 
 ## Contributions
 
-The author of this package is Vivian Wang, who wrote the four functions.
+The author of this package is Vivian Wang, who wrote the functions and Shiny
+app implementation.
 The data overview functions `ViralSignal()` and `VarBreakdown()` use`R.utils` to 
 read the input CSV files, and `dplyr` to arrange the loaded datasets.
 The plotting functions `PlotViralSignal()` and `PlotVarBreakdown()` utilize 
 `ggplot2` to create graphical output from the processed data.
+`runCovidWasteWatch` and `app.R` used `Shiny` to provide an interactive app for
+this package.
 
 ## References
 
-Bengtsson, H (2022). R.utils: Various Programming Utilities. https://henrikbengtsson.github.io/R.utils/
+Attali, D., Edwards, T. (2021). shinyalert: Easily Create Pretty Popup Messages (Modals) in 'Shiny'. https://github.com/daattali/shinyalert
+
+Bengtsson, H. (2022). R.utils: Various Programming Utilities. https://henrikbengtsson.github.io/R.utils/
+
+Chang, W., Cheng, J., Allaire, J., Sievert, C., Schloerke, B., Xie, Y., Allen, J., McPherson, J., Dipert, A., Borges, B. (2023). shiny: Web Application Framework for R. https://github.com/rstudio/shiny, https://shiny.posit.co/
+
+Grolemund, G. (2015). Learn Shiny - Video Tutorials. https://shiny.rstudio.com/tutorial/
 
 R Core Team (2023). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
 
-Silva, A. (2022) TestingPackage: An Example R Package For BCB410H.
-Unpublished. URL https://github.com/anjalisilva/TestingPackage
+Silva, A. (2022) TestingPackage: An Example R Package For BCB410H. https://github.com/anjalisilva/TestingPackage
 
 Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. ISBN 978-3-319-24277-4. https://ggplot2.tidyverse.org
 
-Wickham H, François R, Henry L, Müller K, Vaughan D. (2023). dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org
-
+Wickham, H., François, R., Henry, L., Müller, K., Vaughan, D. (2023). dplyr: A Grammar of Data Manipulation. https://dplyr.tidyverse.org
 
 ## Acknowledgements
 
@@ -105,4 +112,5 @@ This package was developed as part of an assessment for 2023
 BCB410H: Applied Bioinformatics course at the University of
 Toronto, Toronto, CANADA. CovidWasteWatch welcomes issues,
 enhancement requests, and other contributions. To submit an issue,
-use the GitHub issues.
+use the [GitHub issues](https://github.com/viv-wang/CovidWasteWatch/issues). 
+Many thanks to those who provided feedback to improve this package.

@@ -64,7 +64,7 @@ signalFilepath <- system.file("extdata", "viral_signal_input_data.csv",
 # Run and store results of ViralSignal()
 ViralSignalResults <- ViralSignal(fileSignal = signalFilepath)
 
-# To view each component of the result separtely, see names 
+# To view each component of the result separately, see names 
 names(ViralSignalResults)
 # Alternatively, view all results
 ViralSignalResults

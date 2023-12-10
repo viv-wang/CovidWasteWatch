@@ -31,7 +31,7 @@ library("CovidWasteWatch")
 To run the Shiny app:
 
 ``` r
-runCovidWasteWatch
+runCovidWasteWatch()
 ```
 
 ## Overview

@@ -35,8 +35,8 @@ ui <- fluidPage(
       br(),
 
       # input
-      tags$p("Instructions: Below, enter or select values required to perform the analysis. Default
-             values are shown. Then press 'Run' to explore the results."),
+      tags$p("Instructions: Below, upload a data file and select values required to perform the analysis.
+             Then press 'Run' to explore the results to the right."),
 
       # br() element to introduce extra vertical spacing ----
       br(),
@@ -52,13 +52,15 @@ ui <- fluidPage(
       selectInput(inputId = "dataType", label = "Select data type.",
                   choices = c("Viral signal", "Variant frequency")),
       fileInput(inputId = "file1",
-                label = "Select a viral dataset. File should be in .csv format
-                         Viral signal data should have columns 'date' and 'signal'.
-                         Variant frequency data should have columns 'date', 'variant', and optionally 'parent'.",
+                label = "Select a viral dataset. File should be in .csv format.
+                         Viral signal data should have columns 'date' and 'signal',
+                         so each row corresponds to the viral signal at one timepoint.
+                         Variant frequency data should have columns 'date', 'variant', and optionally 'parent',
+                         so each row corresponds to the variant proportion (out of 1) for each variant per timepoint.",
                 accept = c(".csv")),
       selectInput(inputId = "parentBool",
                   label = "If analyzing variant frequency data, select whether
-                  a column 'parent' for parent variants is present. Otherwise, disregard this.",
+                  a column 'parent' for parent variant names is present. Otherwise, disregard this.",
                   choices = c("Yes", "No"), selected = "Yes"),
 
       # br() element to introduce extra vertical spacing ----
@@ -77,6 +79,7 @@ ui <- fluidPage(
       br(),
       plotOutput("plot")
     )
+
   )
 )
 
@@ -178,6 +181,5 @@ server <- function(input, output) {
 
 # Create Shiny app ----
 shiny::shinyApp(ui, server)
-
 
 # [END]

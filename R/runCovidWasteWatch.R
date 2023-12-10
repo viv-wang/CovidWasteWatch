@@ -21,6 +21,7 @@
 #'
 #' @export
 #' @importFrom shiny runApp
+#' @import shinyalert
 
 runCovidWasteWatch <- function() {
   appDir <- system.file("shiny-scripts",

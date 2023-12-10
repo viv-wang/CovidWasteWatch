@@ -112,7 +112,7 @@ server <- function(input, output) {
       if(input$dataType == "Viral signal") {
         output$textOutOverview <- renderPrint({
           if (! is.null(results())) {
-            cat("Number of timepoints:", results()$numTimepoints, "\n")
+            cat("Total number of timepoints:", results()$numTimepoints, "\n")
             cat("Average rate of change per day:", results()$avgRateOfChangePerDay, "\n")
           }
         })
@@ -127,7 +127,7 @@ server <- function(input, output) {
       if (input$dataType == "Variant frequency") {
         output$textOutOverview <- renderPrint({
           if (! is.null(results())) {
-            cat("Number of variants:", results()$numVariants, "\n")
+            cat("Total number of variants:", results()$numVariants, "\n")
           }
         })
 

@@ -93,6 +93,14 @@ Application Framework for R. <https://github.com/rstudio/shiny>,
 Grolemund, G. (2015). Learn Shiny - Video Tutorials.
 <https://shiny.rstudio.com/tutorial/>
 
+Health Canada (2023). COVID-19 epidemiology update: Testing and
+variants.
+<https://health-infobase.canada.ca/covid-19/testing-variants.html>
+
+Public Health Ontario (2023). COVID-19 Wastewater Surveillance in
+Ontario.
+<https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater>
+
 R Core Team (2023). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>
